@@ -21,11 +21,11 @@
         public function getGender(){return $this->_gender;}
         public function getBirthDate(){return $this->_birthDate;}
         
-        public function setIdPerson(){$this->_idPerson = $idPerson;}
-        public function setLastName(){$this->_lastName = $lastName;}
-        public function setFirstName(){$this->_firstName = $firstName;}
-        public function setGender(){$this->_gender = $gender;}
-        public function setBirthDate(){$this->_birthDate = $birthDate;}
+        public function setIdPerson($idPerson){$this->_idPerson = $idPerson;}
+        public function setLastName($lastName){$this->_lastName = $lastName;}
+        public function setFirstName($firstName){$this->_firstName = $firstName;}
+        public function setGender($gender){$this->_gender = $gender;}
+        public function setBirthDate($birthDate){$this->_birthDate = $birthDate;}
         
 
 

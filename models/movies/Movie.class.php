@@ -4,7 +4,7 @@
         private int $_idMovie;
         private string $_title;
         private int $_duration;
-        private string $_releaseDate;
+        private int $_releaseDate;
         private string $_synopsy;
         private int $_notation;
         private string $_poster;
@@ -13,7 +13,7 @@
         
    
 
-        public function __construct(int $idMovie, string $title, int $duration, string $releaseDate, string $synopsy, int $notation, string $poster, int $idDirector){
+        public function __construct(int $idMovie, string $title, int $duration, int $releaseDate, string $synopsy, int $notation, string $poster, int $idDirector){
             $this->_idMovie = $idMovie;
             $this->_title = $title;
             $this->_duration = $duration;
@@ -35,19 +35,14 @@
         public function getPoster(){return $this->_poster;}
         public function getIdDirector(){return $this->_idDirector;}
 
-        public static function getMovies(){return self::$movies;}
 
-        public function setIdMovie($idMovie){ $this->_idMovie = $idMovie ;}
         public function setTitle( $title){ $this->_title = $title ;}
-        public function setDuration(){ $this->_duration = $duration ;}
-        public function setReleaseDate(){ $this->_releaseDate = $releaseDate ;}
-        public function setSynopsy(){ $this->_synopsy = $synopsy ;}
-        public function setNotation(){ $this->_notation = $notation ;}
-        public function setPoster(){ $this->_poster = $poster ;}
-        public function setIdDirector(){ $this->_idDirector = $idDirector;}
-
-
-        
+        public function setDuration($duration){ $this->_duration = $duration ;}
+        public function setReleaseDate($releaseDate){ $this->_releaseDate = $releaseDate ;}
+        public function setSynopsy($synopsy){ $this->_synopsy = $synopsy ;}
+        public function setNotation($notation){ $this->_notation = $notation ;}
+        public function setPoster($poster){ $this->_poster = $poster ;}
+        public function setIdDirector($idDirector){ $this->_idDirector = $idDirector;}
 
     }
 ?>

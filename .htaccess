@@ -1,0 +1,9 @@
+RewriteEngine On
+
+#prevent going to files and folders
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# delete index.php of url
+RewriteRule ^(.*)$ index.php?page=$1
