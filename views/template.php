@@ -28,16 +28,16 @@
                         <a class="nav-link" href="<?= URL ?>movies">Movies</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="actors.php">Actors</a>
+                        <a class="nav-link" href="<?= URL ?>actors">Actors</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="directors.php">Directors</a>
+                        <a class="nav-link" href="<?= URL ?>directors">Directors</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="genders.php">Genres</a>
+                        <a class="nav-link" href="<?= URL ?>genres">Genres</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="castings.php">Castings</a>
+                        <a class="nav-link" href="<?= URL ?>casting">Castings</a>
                     </li>
                
                     <li class="nav-item">

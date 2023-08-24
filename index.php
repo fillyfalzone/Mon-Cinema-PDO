@@ -7,8 +7,10 @@
     define("URL", str_replace("index.php", "", (isset($_SERVER['HTTPS']) ? "https" : "http") . "://" . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF']));
 
     require_once "controllers/Movies.controller.php";
+    require_once "controllers/Actors.controller.php";
 
     $moviesController = new MoviesController;
+    $actorsController = new ActorsController;
 
     try{
         // Setting up the router, send pages according to query string received by URL
@@ -43,6 +45,17 @@
                         $moviesController->validateMovie();
                     } 
                     else {
+                        throw  new Exception("La page n'existe pas"); 
+                    }
+                break;
+
+                case "actors": 
+                    if(empty($url[1])){
+                        $actorsController->showActors();
+                    } 
+                    elseif($url[1] === "actors"){
+                        echo $url[2];
+                    } else {
                         throw  new Exception("La page n'existe pas"); 
                     }
                 break;

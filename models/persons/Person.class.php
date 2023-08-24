@@ -27,7 +27,5 @@
         public function setGender($gender){$this->_gender = $gender;}
         public function setBirthDate($birthDate){$this->_birthDate = $birthDate;}
         
-
-
     }
 ?>
