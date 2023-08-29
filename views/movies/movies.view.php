@@ -2,7 +2,7 @@
     require_once "MyFunctionsPerso.class.php";
     $intToHour = new FunctionPerso;
     ob_start(); // function is used to turn on, output buffering.
-    
+    //This code checks if the 'alert' session variable is not empty. If so, it displays an alert message in a div
     if(!empty($_SESSION['alert'])){ ?>
         <div class="alert alert-<?= $_SESSION['alert']['type'] ?>" role="alert">
             <?= $_SESSION['alert']['message'] ?>
@@ -37,7 +37,7 @@
         </tr>
         <?php endfor; ?>
     </table>
-    <a href="<?= URL ?>movies/add" class="btn btn-success d-block mb-5">Add movie</a>
+    <a href="<?= URL ?>movies/add/" class="btn btn-success d-block mb-5">Add movie</a>
 
 <?php
     $content = ob_get_clean(); // put buffer in $content variable 

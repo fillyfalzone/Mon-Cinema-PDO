@@ -26,6 +26,22 @@
         public function setFirstName($firstName){$this->_firstName = $firstName;}
         public function setGender($gender){$this->_gender = $gender;}
         public function setBirthDate($birthDate){$this->_birthDate = $birthDate;}
+
+
+        public function getName(){
+            return $this->_firstName ." ". $this->_lastName; ;
+        }
+
+
+        public function getAge(){
+            $dateOfBirth = new DateTime($this->_birthDate); 
+            $currentDate = new DateTime();
+            $age = $currentDate->diff($dateOfBirth)->y;
+            $ageString = strval($age);
+            echo $ageString." years old"; 
+        }
         
+
+
     }
 ?>

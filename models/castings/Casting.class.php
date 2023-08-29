@@ -1,4 +1,8 @@
 <?php
+    require_once "models/movies/Movie.class.php";
+    require_once "models/actors/Actor.class.php";
+    require_once "models/roles/role.class.php";
+
     class Casting {
         private $_idMovie;
         private $_idRole;
@@ -29,6 +33,10 @@
         }
         public function setIdActor($idActor){
             $this->_idActor = $idActor;
+        }
+
+        public function getActorById($idActor){
+            
         }
 
     }

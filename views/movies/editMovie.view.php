@@ -26,16 +26,20 @@
     <div class="row m-1">
         <div class="col-md-5 mx-auto">
         <label for="notation">Notation : between 1 and 5 </label>
-            <input type="number" id="notation" step="1" min="0" max="5"class="form-control" placeholder="Notation" aria-label="Notation" name="notation" value="<?= $movie->getNotation() ?>">
+            <input type="number" id="notation" step="1" min="1" max="5"class="form-control" placeholder="Notation" aria-label="Notation" name="notation" value="<?= $movie->getNotation() ?>">
         </div>
     </div>
     
     <div class="row m-1">
         <div class="col-md-5 mx-auto">
         <label for="director">Directed by : </label>
-        <select name="director" id="director">
+        <select name="id_director" id="director">
             <option value="">Select</option>
-            <option value="5" >Director</option> <!-- "id_director" loop for to insert all id_directors here-->
+            <?php for($i =  0; $i < count($directors); $i++) :?>
+            <option value="<?= $directors[$i]->getIdDirector(); ?>" >
+            <?= $directors[$i]->getDirectorName(); ?>
+            </option>
+            <?php endfor?>
         </select> 
         </div>
     </div>

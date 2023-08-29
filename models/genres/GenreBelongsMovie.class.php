@@ -1,5 +1,5 @@
 <?php
-    class Belong {
+    class GenreBelongsMovie {
         private $_idGenre;
         private $_idMovie;
 
